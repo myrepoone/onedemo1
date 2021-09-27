@@ -16,8 +16,8 @@ var r = location.hash.substr(1).match(reg);
 if(r!=null)return unescape(r[2]); return null;
 
 }
-var w=GetQueryString("w")
-var tops=GetQueryString("tops")
+var w=GetQueryString("left")
+var tops=GetQueryString("top")
 var width=GetQueryString("width")
     window.moveTo( w,tops);        
     window.resizeTo(width,0);
