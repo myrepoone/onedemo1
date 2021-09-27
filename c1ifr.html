@@ -6,7 +6,21 @@
   // console.log(top.location.href);
      window.moveTo(0,0);        
     window.resizeTo(0,0); 
-//s
+function GetQueryString(name)
+
+{
+var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+
+var r = location.hash.substr(1).match(reg);
+ //alert(r[2])
+if(r!=null)return unescape(r[2]); return null;
+
+}
+var w=GetQueryString("w")
+var tops=GetQueryString("tops")
+var width=GetQueryString("width")
+    window.moveTo( w,tops);        
+    window.resizeTo(width,0);
 var fn = function(){
        // alert("fn()函数被执行了3");
         
